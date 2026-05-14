@@ -32,17 +32,17 @@
     <body>
 
         <!-- Sidebar -->
-        <?= $this->include('Mentor/Layout/Sidebard.php') ?>
+        <?= $this->include('Layout/Sidebar') ?>
         <!-- End Sidebar -->
 
         <!-- Header -->
-        <?= $this->include('Mentor/Layout/headerd.php') ?>
+        <?= $this->include('Layout/header') ?>
         <!-- End Header -->
 
         <!-- Main Content -->
         <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen" id="main-content">
             
-            <div class="grid grid-cols-1 2xl:grid-cols-2 gap-[25px] mb-[25px]">
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
 
                 <!-- Projects Overview -->
                 <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
@@ -635,16 +635,16 @@
         <!-- End Main Content -->
         
         <!-- Links Of JS File -->
-        <script src="assets/js/apexcharts.min.js"></script>
-        <script src="assets/js/fslightbox.js"></script>
-        <script src="assets/js/simplebar.min.js"></script>
-        <script src="assets/js/prism.js"></script>
-        <script src="assets/js/clipboard.min.js"></script>
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <script src="assets/js/fullcalendar.min.js"></script>
-        <script src="assets/js/jsvectormap.min.js"></script>
-        <script src="assets/js/world-merc.js"></script>
-        <script src="assets/js/quill.min.js"></script>
-        <script src="assets/js/custom.js"></script>
+        <script src="<?= base_url('assets/js/apexcharts.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/fslightbox.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/simplebar.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/prism.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/clipboard.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/swiper-bundle.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/fullcalendar.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/jsvectormap.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/world-merc.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/quill.min.js'); ?>"></script>
+        <script src="<?= base_url('assets/js/custom.js'); ?>"></script>
     </body>
 </html>

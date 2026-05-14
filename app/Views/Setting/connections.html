@@ -65,6 +65,7 @@
                                             Dashboard
                                         </a>
                                     </li>
+                                    <ul class="sidebar-sub-menu">
                                     <li class="sidemenu-item mb-[4px] last:mb-0">
                                         <a href="pm-teams.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                             Project List
@@ -75,11 +76,15 @@
                                             Penilaian
                                         </a>
                                     </li>
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="pm-users.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Sertifikat
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-
                     <span class="block relative font-medium uppercase text-gray-400 mb-[10px] text-xs [&:not(:first-child)]:mt-[22px]">
                         Others
                     </span>
@@ -94,7 +99,7 @@
                         </a>
                     </div>
                     <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
-                        <button class="accordion-button toggle flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[28px] rtl:pr-[14px] rtl:pl-[28px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]" type="button">
+                        <button class="accordion-button toggle open flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[28px] rtl:pr-[14px] rtl:pl-[28px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]" type="button">
                             <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
                                 settings
                             </i>
@@ -102,7 +107,7 @@
                                 Settings
                             </span>
                         </button>
-                        <div class="accordion-collapse hidden">
+                        <div class="accordion-collapse" style="display: block;">
                             <div class="pt-[4px]">
                                 <ul class="sidebar-sub-menu">
                                     <li class="sidemenu-item mb-[4px] last:mb-0">
@@ -116,7 +121,7 @@
                                         </a>
                                     </li>
                                     <li class="sidemenu-item mb-[4px] last:mb-0">
-                                        <a href="connections.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                        <a href="connections.html" class="sidemenu-link active rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
                                             Connections
                                         </a>
                                     </li>
@@ -253,7 +258,7 @@
             <!-- Breadcrumb -->
             <div class="mb-[25px] md:flex items-center justify-between">
                 <h5 class="!mb-0">
-                    Edit Project
+                    Connections
                 </h5>
                 <ol class="breadcrumb mt-[12px] md:mt-0">
                     <li class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
@@ -265,93 +270,192 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
-                        Project Management
+                        Settings
                     </li>
                     <li class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
-                        Edit Project
+                        Connections
                     </li>
                 </ol>
             </div>
 
-            <!-- Edit Project -->
-            <form>
-                <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                    <div class="trezo-card-content">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-[20px] md:gap-[25px]">
-                            <div class="sm:col-span-2">
-                                <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                    Nama Project
-                                </label>
-                                <input type="text" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500" placeholder="Task name">
+            <!-- Connections -->
+            <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
+                <div class="trezo-card-content">
+                    <ul class="mb-[10px]">
+                        <li class="inline-block mb-[15px] ltr:mr-[11px] rtl:ml-[11px] ltr:last:mr-0 rtl:last:ml-0">
+                            <a href="settings.html" class="block rounded-md font-medium py-[8.5px] px-[15px] text-primary-500 border border-primary-500 transition-all hover:bg-primary-500 hover:text-white">
+                                Account Settings
+                            </a>
+                        </li>
+                        <li class="inline-block mb-[15px] ltr:mr-[11px] rtl:ml-[11px] ltr:last:mr-0 rtl:last:ml-0">
+                            <a href="change-password.html" class="block rounded-md font-medium py-[8.5px] px-[15px] text-primary-500 border border-primary-500 transition-all hover:bg-primary-500 hover:text-white">
+                                Change Password
+                            </a>
+                        </li>
+                        <li class="inline-block mb-[15px] ltr:mr-[11px] rtl:ml-[11px] ltr:last:mr-0 rtl:last:ml-0">
+                            <a href="connections.html" class="block rounded-md font-medium py-[8.5px] px-[15px] text-primary-500 border border-primary-500 transition-all bg-primary-500 text-white">
+                                Connections
+                            </a>
+                        </li>
+                        <li class="inline-block mb-[15px] ltr:mr-[11px] rtl:ml-[11px] ltr:last:mr-0 rtl:last:ml-0">
+                            <a href="privacy-policy.html" class="block rounded-md font-medium py-[8.5px] px-[15px] text-primary-500 border border-primary-500 transition-all hover:bg-primary-500 hover:text-white">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="inline-block mb-[15px] ltr:mr-[11px] rtl:ml-[11px] ltr:last:mr-0 rtl:last:ml-0">
+                            <a href="terms-conditions.html" class="block rounded-md font-medium py-[8.5px] px-[15px] text-primary-500 border border-primary-500 transition-all hover:bg-primary-500 hover:text-white">
+                                Terms & Conditions
+                            </a>
+                        </li>
+                    </ul>
+                    <h5 class="!mb-[22px]">
+                        Connected Accounts
+                    </h5>
+                    <ul>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/google.svg" class="w-[40px]" alt="google">
+                                <div>
+                                    <span class="block text-black dark:text-white font-semibold">
+                                        Google
+                                    </span>
+                                    <span class="block mt-[3px]">
+                                        Calendar and Contacts
+                                    </span>
+                                </div>
                             </div>
-                            <div>
-                                <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                    Project ID
-                                </label>
-                                <input type="text" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500" placeholder="E.g. #854">
-                            </div>
-                            <div>
-                                <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                    Pilih Mentor
-                                </label>
-                                <select class="h-[55px] rounded-md border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[13px] block w-full outline-0 cursor-pointer transition-all focus:border-primary-500">
-                                    <option selected>
-                                        Select
-                                    </option>
-                                    <option value="1">
-                                        Walter Frazier
-                                    </option>
-                                    <option value="2">
-                                        Kimberly Anderson
-                                    </option>
-                                    <option value="3">
-                                        Roscoe Guerrero
-                                    </option>
-                                    <option value="4">
-                                        Robert Stewart
-                                    </option>
-                                    <option value="5">
-                                        Dustin Fritch
-                                    </option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                    Tanggal Mulai
-                                </label>
-                                <input type="date" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500">
-                            </div>
-                            <div>
-                                <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                    Tanggal Selesai
-                                </label>
-                                <input type="date" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500">
-                            </div>
-                            <div class="sm:col-span-2">
-                                <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                    Deskripsi Project
-                                </label>
-                                <div id="richTextEditor" class="!h-[179px]"></div>
-                            </div>
-                        </div>
-                        <div class="mt-[20px] md:mt-[25px]">
-                            <button type="button" class="font-medium inline-block transition-all rounded-md md:text-md ltr:mr-[15px] rtl:ml-[15px] py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-danger-500 text-white hover:bg-danger-400">
-                                <a href="pm-teams.html" >
-                                    Batal
-                                </a>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
                             </button>
-                            <button type="button" class="font-medium inline-block transition-all rounded-md md:text-md py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-primary-500 text-white hover:bg-primary-400">
-                                <span class="inline-block relative ltr:pl-[29px] rtl:pr-[29px]">
-                                    <i class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
-                                        add
-                                    </i>
-                                    Simpan
+                        </li>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/slack.svg" class="w-[40px]" alt="slack">
+                                <div>
+                                    <span class="block text-black dark:text-white font-semibold">
+                                        Slack
+                                    </span>
+                                    <span class="block mt-[3px]">
+                                        Communications
+                                    </span>
+                                </div>
+                            </div>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
+                            </button>
+                        </li>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/github.svg" class="w-[40px]" alt="github">
+                                <div>
+                                    <span class="block text-black dark:text-white font-semibold">
+                                        GitHub
+                                    </span>
+                                    <span class="block mt-[3px]">
+                                        Manage your Git repositories
+                                    </span>
+                                </div>
+                            </div>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
+                            </button>
+                        </li>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/mailchimp.svg" class="w-[40px]" alt="mailchimp">
+                                <div>
+                                    <span class="block text-black dark:text-white font-semibold">
+                                        Mailchimp
+                                    </span>
+                                    <span class="block mt-[3px]">
+                                        Email marketing service
+                                    </span>
+                                </div>
+                            </div>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
+                            </button>
+                        </li>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/figma.svg" class="w-[40px]" alt="figma">
+                                <div>
+                                    <span class="block text-black dark:text-white font-semibold">
+                                        Figma
+                                    </span>
+                                    <span class="block mt-[3px]">
+                                        Design
+                                    </span>
+                                </div>
+                            </div>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="border-t border-gray-100 dark:border-[#172036] my-[20px] md:my-[25px]"></div>
+                    <h5 class="!mb-[22px]">
+                        Social Accounts
+                    </h5>
+                    <ul>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/facebook.svg" class="w-[40px]" alt="facebook">
+                                <span class="block text-black dark:text-white font-semibold">
+                                    Facebook
                                 </span>
+                            </div>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
                             </button>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/twitter.svg" class="w-[40px]" alt="twitter">
+                                <span class="block text-black dark:text-white font-semibold">
+                                    X
+                                </span>
+                            </div>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
+                            </button>
+                        </li>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/instagram.svg" class="w-[40px]" alt="instagram">
+                                <span class="block text-black dark:text-white font-semibold">
+                                    Instagram
+                                </span>
+                            </div>
+                            <button type="button" class="inline-block">
+                                Not Connected
+                            </button>
+                        </li>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/dribbble.svg" class="w-[40px]" alt="dribbble">
+                                <span class="block text-black dark:text-white font-semibold">
+                                    Dribbble
+                                </span>
+                            </div>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
+                            </button>
+                        </li>
+                        <li class="flex items-center justify-between mb-[20px] last:mb-0">
+                            <div class="flex items-center gap-[15px]">
+                                <img src="assets/images/socials/behance.svg" class="w-[40px]" alt="behance">
+                                <span class="block text-black dark:text-white font-semibold">
+                                    Behance
+                                </span>
+                            </div>
+                            <button type="button" class="inline-block transition-all text-primary-500 hover:underline">
+                                Click to Disconnect
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-            </form>
+            </div>
 
             <div class="grow"></div>
 

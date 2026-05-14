@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html dir="ltr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links Of CSS File -->
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/apexcharts.css">
+        <link rel="stylesheet" href="assets/css/simplebar.css">
+        <link rel="stylesheet" href="assets/css/prism.css">
+        <link rel="stylesheet" href="assets/css/jsvectormap.min.css">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/quill.snow.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon -->
+		<link rel="icon" type="image/png" href="https://img.mbizmarket.co.id/company/thumbs/343x343/2024/02/27/291a409622c265d0c11c71831761d102.jpg">
+
+        <!-- Title -->
+        <title>Profil Saya</title>
+
+        <!-- Font Family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Material Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body>
+
+         <!-- Sidebar -->
+        <div class="sidebar-area bg-white dark:bg-[#0c1427] fixed overflow-hidden z-[7] top-0 h-screen transition-all rounded-r-md" id="sidebar-area">
+            <div class="logo bg-white dark:bg-[#0c1427] border-b border-gray-100 dark:border-[#172036] px-[25px] pt-[19px] pb-[15px] absolute z-[2] right-0 top-0 left-0">
+                <img src="https://otwcomputer.gusaha.id/assets/img/logo_otw.png" class="h-[50px] w-[200px]" alt="logo">
+                <button type="button" class="burger-menu inline-block absolute z-[3] top-[24px] ltr:right-[25px] rtl:left-[25px] transition-all hover:text-primary-500" id="hide-sidebar-toggle2">
+                    <i class="material-symbols-outlined">
+                        close
+                    </i>
+                </button>
+            </div>
+            <div class="pt-[89px] px-[25px] pb-[20px] h-screen" data-simplebar>
+                <div class="accordion">
+                    <span class="block relative font-medium uppercase text-gray-400 mb-[10px] text-xs">
+                        Utama
+                    </span>
+                    <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                        <button class="accordion-button toggle open active flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[28px] rtl:pr-[14px] rtl:pl-[28px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]" type="button">
+                            <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                                dashboard
+                            </i>
+                            <span class="title leading-none">
+                                Menu Intern
+                            </span>
+                        </button>
+                        <div class="accordion-collapse" style="display: block;">
+                            <div class="pt-[4px]">
+                                <ul class="sidebar-sub-menu" id="dashboardItemsList">
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="lms-index.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Dashboard Intern
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="pm-teams.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Penugasan Intern
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="sertifikat.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Sertifikat Intern
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="block relative font-medium uppercase text-gray-400 mb-[10px] text-xs [&:not(:first-child)]:mt-[22px]">
+                        Lainnya
+                    </span>
+                    <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                        <a href="my-profile.html" class="accordion-button active flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[28px] rtl:pr-[14px] rtl:pl-[28px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                            <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                                account_circle
+                            </i>
+                            <span class="title leading-none">
+                                Profil Saya
+                            </span>
+                        </a>
+                    </div>
+                    <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                        <button class="accordion-button toggle active open flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[28px] rtl:pr-[14px] rtl:pl-[28px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]" type="button">
+                            <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                                settings
+                            </i>
+                            <span class="title leading-none">
+                                Pengaturan
+                            </span>
+                        </button>
+                        <div class="accordion-collapse" style="display: block;">
+                            <div class="pt-[4px]">
+                                <ul class="sidebar-sub-menu">
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="settings.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Pengaturan Akun
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="change-password.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Ubah Kata Sandi
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="connections.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Koneksi
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="privacy-policy.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Kebijakan Privasi
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu-item mb-[4px] last:mb-0">
+                                        <a href="terms-conditions.html" class="sidemenu-link rounded-md flex items-center relative transition-all font-medium text-gray-500 dark:text-gray-400 py-[9px] ltr:pl-[38px] ltr:pr-[30px] rtl:pr-[38px] rtl:pl-[30px] hover:text-primary-500 hover:bg-primary-50 w-full text-left dark:hover:bg-[#15203c]">
+                                            Syarat & Ketentuan
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item rounded-md text-black dark:text-white mb-[5px] whitespace-nowrap">
+                        <a href="sign-in.html" class="accordion-button flex items-center transition-all py-[9px] ltr:pl-[14px] ltr:pr-[28px] rtl:pr-[14px] rtl:pl-[28px] rounded-md font-medium w-full relative hover:bg-gray-50 text-left dark:hover:bg-[#15203c]">
+                            <i class="material-symbols-outlined transition-all text-gray-500 dark:text-gray-400 ltr:mr-[7px] rtl:ml-[7px] !text-[22px] leading-none relative -top-px">
+                                logout
+                            </i>
+                            <span class="title leading-none">
+                                Keluar
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Sidebar -->
+
+       <!-- Header -->
+        <div class="header-area bg-white dark:bg-[#0c1427] py-[13px] px-[20px] md:px-[25px] fixed top-0 z-[6] rounded-b-md transition-all" id="header-area">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex items-center justify-center md:justify-normal">
+                    <div class="relative leading-none top-px ltr:mr-[13px] ltr:md:mr-[18px] ltr:lg:mr-[23px] rtl:ml-[13px] rtl:md:ml-[18px] rtl:lg:ml-[23px]">
+                        <button type="button" class="hide-sidebar-toggle transition-all inline-block hover:text-primary-500" id="hide-sidebar-toggle">
+                            <i class="material-symbols-outlined !text-[20px]">
+                                menu
+                            </i>
+                        </button>
+                    </div>
+                </div>
+
+                <ul class="flex items-center justify-center md:justify-normal mt-[13px] md:mt-0">
+                    <li class="relative mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                        <button type="button" class="light-dark-toggle leading-none inline-block transition-all relative top-[2px] text-[#fe7a36]" id="light-dark-toggle">
+                            <i class="material-symbols-outlined !text-[20px] md:!text-[22px]">
+                                light_mode
+                            </i>
+                        </button>
+                    </li>
+                    
+                    <li class="relative notifications-menu mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                        <button type="button" class="leading-none inline-block transition-all relative top-[2px] hover:text-primary-500" id="dropdownToggleBtn">
+                            <i class="material-symbols-outlined !text-[22px] md:!text-[24px]">
+                                notifications
+                            </i>
+                            <span class="top-[3px] ltr:right-[4px] rtl:left-[4px] w-[6px] h-[6px] rounded-full absolute bg-orange-500"></span>
+                        </button>
+                        <div class="notifications-menu-dropdown bg-white dark:bg-[#0c1427] transition-all shadow-3xl dark:shadow-none py-[17px] absolute mt-[17px] md:mt-[20px] w-[290px] md:w-[350px] z-[1] top-full ltr:-right-[120px] ltr:md:right-0 rtl:-left-[120px] rtl:md:left-0 rounded-md">
+                            <div class="flex items-center justify-between px-[20px] pb-[17px]">
+                                <span class="font-semibold text-black dark:text-white text-[15px]">
+                                    Notifications
+                                    <span class="text-gray-500 dark:text-gray-400 font-normal text-base">
+                                        (03)
+                                    </span>
+                                </span>
+                                <a href="javascript:void(0);" class="text-primary-500">
+                                    Clear All
+                                </a>
+                            </div>
+                            <ul class="mb-[18px]">
+                                <li class="relative border-b border-gray-100 dark:border-[#172036] border-dashed py-[17px] ltr:pl-[75px] ltr:pr-[20px] rtl:pr-[75px] rtl:pl-[20px] first:border-t first:border-gray-100 dark:first:border-[#172036]">
+                                    <div class="rounded-full flex items-center justify-center absolute text-center transition-all top-1/2 -translate-y-1/2 ltr:left-[20px] rtl:right-[20px] w-[44px] h-[44px] text-primary-500 bg-[#4936f50d]">
+                                        <i class="material-symbols-outlined !text-[22px]">
+                                            sms
+                                        </i>
+                                    </div>
+                                    <span class="block mb-[3px] text-black dark:text-white">
+                                        You have requested to <strong class="font-semibold">withdrawal</strong>
+                                    </span>
+                                    <span class="block">
+                                        2 hrs ago
+                                    </span>
+                                    <a href="notifications.html" class="block left-0 top-0 right-0 bottom-0 z-[1] absolute"></a>
+                                </li>
+                                <li class="relative border-b border-gray-100 dark:border-[#172036] border-dashed py-[17px] ltr:pl-[75px] ltr:pr-[20px] rtl:pr-[75px] rtl:pl-[20px] first:border-t first:border-gray-100 dark:first:border-[#172036]">
+                                    <div class="rounded-full flex items-center justify-center absolute text-center transition-all top-1/2 -translate-y-1/2 ltr:left-[20px] rtl:right-[20px] w-[44px] h-[44px] text-[#39b2de] bg-[#4936f50d]">
+                                        <i class="material-symbols-outlined !text-[22px]">
+                                            person
+                                        </i>
+                                    </div>
+                                    <span class="block mb-[3px] text-black dark:text-white">
+                                        <strong class="font-semibold">A new user</strong> added in Trezo
+                                    </span>
+                                    <span class="block">
+                                        3 hrs ago
+                                    </span>
+                                    <a href="notifications.html" class="block left-0 top-0 right-0 bottom-0 z-[1] absolute"></a>
+                                    <span class="inline-block rounded-full bg-primary-500 absolute w-[6px] h-[6px] right-[20px] top-1/2 -translate-y-1/2"></span>
+                                </li>
+                                <li class="relative border-b border-gray-100 dark:border-[#172036] border-dashed py-[17px] ltr:pl-[75px] ltr:pr-[20px] rtl:pr-[75px] rtl:pl-[20px] first:border-t first:border-gray-100 dark:first:border-[#172036]">
+                                    <div class="rounded-full flex items-center justify-center absolute text-center transition-all top-1/2 -translate-y-1/2 ltr:left-[20px] rtl:right-[20px] w-[44px] h-[44px] text-[#00b69b] bg-[#4936f50d]">
+                                        <i class="material-symbols-outlined !text-[22px]">
+                                            mark_email_unread
+                                        </i>
+                                    </div>
+                                    <span class="block mb-[3px] text-black dark:text-white">
+                                        You have requested to <strong class="font-semibold">withdrawal</strong>
+                                    </span>
+                                    <span class="block">
+                                        1 day ago
+                                    </span>
+                                    <a href="notifications.html" class="block left-0 top-0 right-0 bottom-0 z-[1] absolute"></a>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="notifications.html" class="inline-block font-medium relative text-primary-500 transition-all hover:underline">
+                                    See All Notifications
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative profile-menu mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                        <button type="button" class="flex items-center -mx-[5px] relative ltr:pr-[14px] rtl:pl-[14px] text-black dark:text-white" id="dropdownToggleBtn">
+                            <img src="https://yt3.googleusercontent.com/1DwvRbjeV5QzJYYJZgT6U-3R9GawhJkg-TinKEOkoFTuTgKiE-kjbTJtT2ZisSglUxCBqXlgFw=s160-c-k-c0x00ffffff-no-rj" class="w-[35px] h-[35px] md:w-[42px] md:h-[42px] rounded-full ltr:md:mr-[2px] ltr:lg:mr-[8px] rtl:md:ml-[2px] rtl:lg:ml-[8px] border-[2px] border-primary-200 inline-block" alt="admin-image">
+                            <span class="block font-semibold text-[0] lg:text-base">
+                                Rafif
+                            </span>
+                            <i class="ri-arrow-down-s-line text-[15px] absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>
+                        </button>
+                        <div class="profile-menu-dropdown bg-white dark:bg-[#0c1427] transition-all shadow-3xl dark:shadow-none py-[22px] absolute mt-[13px] md:mt-[14px] w-[195px] z-[1] top-full ltr:right-0 rtl:left-0 rounded-md">
+                            <div class="flex items-center border-b border-gray-100 dark:border-[#172036] pb-[12px] mx-[20px] mb-[10px]">
+                                <img src="https://yt3.googleusercontent.com/1DwvRbjeV5QzJYYJZgT6U-3R9GawhJkg-TinKEOkoFTuTgKiE-kjbTJtT2ZisSglUxCBqXlgFw=s160-c-k-c0x00ffffff-no-rj" class="rounded-full w-[31px] h-[31px] ltr:mr-[9px] rtl:ml-[9px] border-2 border-primary-200 inline-block" alt="admin-image">
+                                <div>
+                                    <span class="block text-black dark:text-white font-medium">
+                                        Rafif
+                                    </span>
+                                    <span class="block text-xs">
+                                        Internship
+                                    </span>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="my-profile.html" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                        <i class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                            account_circle
+                                        </i>
+                                        Profil Saya
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pm-teams.html" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                        <i class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                            format_list_bulleted
+                                        </i>
+                                        Penugasan Intern
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="settings.html" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                        <i class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                            settings
+                                        </i>
+                                        Pengaturan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="sign-in.html" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                        <i class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
+                                            logout
+                                        </i>
+                                        Keluar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Header -->
+
+        <!-- Main Content -->
+        <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen" id="main-content">
+
+            <div class="mb-[25px] md:flex items-center justify-between">
+                <h5 class="!mb-0 text-xl font-semibold">Profil Saya</h5>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-[25px] mb-[25px]">
+                
+                <div class="lg:col-span-1">
+                    <div class="trezo-card bg-white dark:bg-[#0c1427] p-[25px] rounded-md text-center">
+                        <div class="relative inline-block mb-[20px]">
+                            <img src="https://yt3.googleusercontent.com/1DwvRbjeV5QzJYYJZgT6U-3R9GawhJkg-TinKEOkoFTuTgKiE-kjbTJtT2ZisSglUxCBqXlgFw=s160-c-k-c0x00ffffff-no-rj" alt="Profile" class="w-[120px] h-[120px] rounded-full border-4 border-primary-50 dark:border-[#15203c] object-cover">
+                            <span class="absolute bottom-[5px] right-[5px] w-[18px] h-[18px] bg-success-500 border-2 border-white dark:border-[#0c1427] rounded-full"></span>
+                        </div>
+                        <h4 class="text-xl font-bold mb-[5px] text-black dark:text-white">Rafif Dary Asmara</h4>
+                        <p class="text-primary-500 font-medium mb-[20px]">Frontend Developer</p>
+                        
+                        <div class="border-t border-gray-100 dark:border-[#172036] pt-[20px]">
+                            <h6 class="text-sm font-semibold mb-[15px] text-left uppercase tracking-wider text-gray-500">Portfolio & Social</h6>
+                            <div class="flex flex-col gap-[12px]">
+    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-[10px] p-[10px] rounded-md border border-gray-100 dark:border-[#172036] hover:bg-primary-50 dark:hover:bg-[#15203c] transition-all">
+        <i class="ri-linkedin-box-fill text-xl text-[#0077b5]"></i>
+        <span class="text-sm font-medium">LinkedIn Profile</span>
+    </a>
+
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-[10px] p-[10px] rounded-md border border-gray-100 dark:border-[#172036] hover:bg-primary-50 dark:hover:bg-[#15203c] transition-all">
+        <i class="ri-github-fill text-xl text-black dark:text-white"></i>
+        <span class="text-sm font-medium">GitHub Repository</span>
+    </a>
+
+    <a href="https://www.youtube.com/@Rafif_Dary" target="_blank" rel="noopener noreferrer" class="flex items-center gap-[10px] p-[10px] rounded-md border border-gray-100 dark:border-[#172036] hover:bg-primary-50 dark:hover:bg-[#15203c] transition-all">
+        <i class="ri-youtube-fill text-xl text-red-500"></i>
+        <span class="text-sm font-medium">Channel Youtube</span>
+    </a>
+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="trezo-card bg-white dark:bg-[#0c1427] p-[25px] rounded-md h-full">
+                        <div class="trezo-card-header mb-[25px] border-b border-gray-100 dark:border-[#172036] pb-[15px]">
+                            <h5 class="text-lg font-bold">Informasi Detail</h5>
+                        </div>
+                        
+                        <div class="trezo-card-content">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-[25px]">
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase mb-[5px]">Gender</span>
+                                    <p class="font-medium text-black dark:text-white">Laki-laki</p>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase mb-[5px]">Email Address</span>
+                                    <p class="font-medium text-black dark:text-white">rafifdary54@gmail.com</p>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase mb-[5px]">Nomor HP</span>
+                                    <p class="font-medium text-black dark:text-white">+62 857 3950 4635</p>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase mb-[5px]">Domisili</span>
+                                    <p class="font-medium text-black dark:text-white">Surabaya, Jawa Timur</p>
+                                </div>
+                                
+                                <div class="md:col-span-2 border-t border-dashed border-gray-200 dark:border-[#172036] my-[10px]"></div>
+
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase mb-[5px]">Institusi / Kampus</span>
+                                    <p class="font-medium text-black dark:text-white">Universitas 17 Agustus 1945 Surabaya</p>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase mb-[5px]">Jurusan</span>
+                                    <p class="font-medium text-black dark:text-white">Teknik Informatika</p>
+                                </div>
+
+                                <div class="md:col-span-2 border-t border-dashed border-gray-200 dark:border-[#172036] my-[10px]"></div>
+
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase mb-[5px]">Posisi Magang</span>
+                                    <span class="inline-block px-[10px] py-[3px] bg-primary-100 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400 rounded-full text-xs font-bold">
+                                        Frontend Developer
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="block text-gray-500 text-xs uppercase mb-[5px]">Masa Periode Magang</span>
+                                    <div class="flex items-center gap-[8px] text-black dark:text-white">
+                                        <i class="ri-calendar-todo-line text-primary-500"></i>
+                                        <p class="font-medium">April 2026 - Juni 2026 (2 Bulan)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-[30px] p-[20px] bg-gray-50 dark:bg-[#15203c] rounded-md border border-gray-100 dark:border-[#172036]">
+                                <h6 class="text-sm font-bold mb-[10px]">Catatan / Motivasi:</h6>
+                                <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    "Berfokus pada pengembangan antarmuka pengguna yang intuitif dan riset pengalaman pengguna. Memiliki ketertarikan besar pada desain sistem dan aksesibilitas produk digital."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grow"></div>
+
+            <!-- Footer -->
+            <footer class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
+                <p>
+                    © <span class="text-purple-500">Trezo</span> is Proudly Owned by <a href="https://envytheme.com/" target="_blank" class="text-primary-500 transition-all hover:underline">EnvyTheme</a>
+                </p>
+            </footer>
+            
+        </div>
+        <!-- End Main Content -->
+         
+        <!-- Links Of JS File -->
+        <script src="assets/js/apexcharts.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/prism.js"></script>
+        <script src="assets/js/clipboard.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/fullcalendar.min.js"></script>
+        <script src="assets/js/jsvectormap.min.js"></script>
+        <script src="assets/js/world-merc.js"></script>
+        <script src="assets/js/quill.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>
