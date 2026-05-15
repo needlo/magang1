@@ -2,38 +2,71 @@
 	"use strict";
 
     // Sidebar Menu
-    const sidebarAreaID = document.getElementById("sidebar-area");
-    if (sidebarAreaID) {
-        function initializeAccordions() {
-            const accordions = document.querySelectorAll('.accordion-button.toggle, .sidemenu-link.toggle');
-            accordions.forEach((accordion) => {
-                accordion.addEventListener('click', function () {
-                    // Close all panels in the current accordion level
-                    let siblingAccordions = Array.from(this.closest('.accordion-collapse')?.querySelectorAll('.accordion-button.toggle, .sidemenu-link.toggle') || accordions);
-                    siblingAccordions.forEach((acc) => {
-                        if (acc !== accordion) {
-                            acc.classList.remove('open');
-                            acc.setAttribute('aria-expanded', 'false');
-                            acc.nextElementSibling.style.display = 'none';
+const sidebarAreaID = document.getElementById("sidebar-area");
+
+if (sidebarAreaID) {
+
+    function initializeAccordions() {
+
+        const accordions = document.querySelectorAll('.accordion-button.toggle, .sidemenu-link.toggle');
+
+        accordions.forEach((accordion) => {
+
+            const panel = accordion.nextElementSibling;
+
+            // Sinkronisasi awal
+            if (!panel.classList.contains('hidden')) {
+                accordion.classList.add('open');
+                accordion.setAttribute('aria-expanded', 'true');
+            } else {
+                accordion.classList.remove('open');
+                accordion.setAttribute('aria-expanded', 'false');
+            }
+
+            accordion.addEventListener('click', function () {
+
+                let siblingAccordions = Array.from(
+                    this.closest('.accordion-collapse')?.querySelectorAll('.accordion-button.toggle, .sidemenu-link.toggle')
+                    || accordions
+                );
+
+                // Tutup accordion lain
+                siblingAccordions.forEach((acc) => {
+
+                    if (acc !== accordion) {
+
+                        acc.classList.remove('open');
+                        acc.setAttribute('aria-expanded', 'false');
+
+                        const siblingPanel = acc.nextElementSibling;
+
+                        if (siblingPanel) {
+                            siblingPanel.classList.add('hidden');
                         }
-                    });
-                    // Toggle current panel
-                    this.classList.toggle('open');
-                    const panel = this.nextElementSibling;
-                    if (panel.style.display === 'block') {
-                        panel.style.display = 'none';
-                        this.setAttribute('aria-expanded', 'false');
-                    } else {
-                        panel.style.display = 'block';
-                        this.setAttribute('aria-expanded', 'true');
                     }
                 });
+
+                // Toggle current
+                this.classList.toggle('open');
+
+                if (panel.classList.contains('hidden')) {
+
+                    panel.classList.remove('hidden');
+                    this.setAttribute('aria-expanded', 'true');
+
+                } else {
+
+                    panel.classList.add('hidden');
+                    this.setAttribute('aria-expanded', 'false');
+                }
             });
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeAccordions();
         });
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeAccordions();
+    });
+}
 
     // Hide Sidebar Toggle
     const hideSidebarToggleID = document.getElementById("hide-sidebar-toggle");

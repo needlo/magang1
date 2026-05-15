@@ -4,6 +4,13 @@ namespace App\Controllers;
 
 class Mentor extends BaseController
 {
+    public function __construct()
+    {
+        session()->set([
+            'role' => 'mentor'
+        ]);
+    }
+
     //dashboard
     public function dashboard()
     {
@@ -14,79 +21,68 @@ class Mentor extends BaseController
     //project
     public function project_list()
     {
-        return view('Mentor/Menu/Project_list/pm-teams'); // tampilan project / kelas
+        return view('Mentor/Project_list/pm-teams'); // tampilan project / kelas
     }
 
     public function create_project()
     {
-        return view('Mentor/Menu/Project_list/create-project'); // tampilan create project
+        return view('Mentor/Project_list/create-project'); // tampilan create project
     }
 
     public function edit_project()
     {
-        return view('Mentor/Menu/Project_list/pm-edit-teams'); // tampilan edit project
+        return view('Mentor/Project_list/pm-edit-teams'); // tampilan edit project
     }
 
+    //selesai bagian project
+    
+    //view project
     public function task_project()
     {
-        return view('Mentor/Menu/Project_list/to-do-list'); // tampilan view tugas
+        return view('Mentor/Project_list/to-do-list'); // tampilan view tugas
     }
-    //selesai bagian project
 
-    //view project
     public function view_project()
     {
-        return view('Mentor/Menu/Project_list/pm-view-project-team'); // tampilan view project
+        return view('Mentor/Project_list/pm-view-project-team'); // tampilan view project
     }
 
     public function edit_task_project()
     {
-        return view('Mentor/Menu/Project_list/pm-teams-task-edit'); // tampilan edit tugas
+        return view('Mentor/Project_list/pm-teams-task-edit'); // tampilan edit tugas
     }
 
     public function add_task_project()
     {
-        return view('Mentor/Menu/Project_list/pm-teams-task-add'); // tampilan tambah tugas
+        return view('Mentor/Project_list/pm-teams-task-add'); // tampilan tambah tugas
     }
     //selesai bagian view project
 
     //bagian penilaian
     public function penilaian()
     {
-        return view('Mentor/Menu/Penilaian/pm-users'); // tampilan penilaian
+        return view('Mentor/Penilaian/pm-user-kelompok-penilaian'); // tampilan penilaian
     }
 
     public function kelompok_penilaian()
     {
-        return view('Mentor/Menu/Penilaian/pm-user-kelompok-penilaian'); // tampilan kelompok penilaian
+        return view('Mentor/Penilaian/pm-users'); // tampilan kelompok penilaian
     }
 
     public function edit_penilaian()
     {
-        return view('Mentor/Menu/Penilaian/pm-user-edit'); // tampilan edit penilaian
+        return view('Mentor/Penilaian/pm-user-edit'); // tampilan edit penilaian
     }
     //selesai bagian penilaian
 
     //bagian sertifikat
     public function sertifikat()
     {
-        return view('Mentor/Menu/Sertifikat/pm-sertifikat'); // tampilan awal generate sertifikat
+        return view('Mentor/Sertifikat/pm-sertifikat'); // tampilan awal generate sertifikat
     }
     public function generate_sertifikat()
     {
-        return view('Mentor/Menu/Sertifikat/pm-sertifikat-edit'); //tampilan generate sertifikat
-    }
-    public function edit_sertifikat()
-    {
-        return view('Mentor/Menu/Sertifikat/pm-sertifikat-edit'); // tampilan edit generate sertifikat
-    }
-    public function upload_template_sertifikat()
-    {
-        return view('Mentor/Menu/Sertifikat/pm-sertifikat-upload-template'); // tampilan upload template sertifikat
-    }
-    public function edit_template_sertifikat()
-    {
-        return view('Mentor/Menu/Sertifikat/pm-sertifikat-edit-template'); // tampilan edit template sertifikat
+        return view('Mentor/Sertifikat/pm-sertifikat-edit'); //tampilan generate sertifikat
     }
     //selesai bagian sertifikat
 }

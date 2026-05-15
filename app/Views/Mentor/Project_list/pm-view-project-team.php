@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 
         <!-- Favicon -->
-		<link rel="icon" type="image/png" href="assets/images/OtwLogo.png">
+		<link rel="icon" type="image/png" href=<?= base_url("assets/images/OtwLogo.png") ?>>
 
         <!-- Title -->
         <title>Trezo - Tailwind CSS Admin Dashboard Template</title>

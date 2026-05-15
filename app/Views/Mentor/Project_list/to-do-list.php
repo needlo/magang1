@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 
         <!-- Favicon -->
-		<link rel="icon" type="image/png" href="assets/images/OtwLogo.png">
+		<link rel="icon" type="image/png" href=<?= base_url("assets/images/OtwLogo.png") ?>>
 
         <!-- Title -->
         <title>Mentor-magang-otw</title>
@@ -70,7 +70,7 @@
             <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
                 <div class="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
                         <div class="trezo-card-subtitle mt-[15px] sm:mt-0">
-                            <a href=<?= base_url("mentor/project-list")?> class="inline-block transition-all rounded-md font-medium px-[13px] py-[6px] text-primary-500 border border-primary-500 hover:bg-primary-500 hover:text-white">
+                            <a href=<?= base_url("project-list")?> class="inline-block transition-all rounded-md font-medium px-[13px] py-[6px] text-primary-500 border border-primary-500 hover:bg-primary-500 hover:text-white">
                                  <span class="inline-block relative ltr:pl-[22px] rtl:pr-[22px]">
                                     <i class="material-symbols-outlined !text-[22px] absolute ltr:-left-[4px] rtl:-right-[4px] top-1/2 -translate-y-1/2">
                                         arrow_back_ios
@@ -81,7 +81,7 @@
                         </div>
                     <div class="trezo-card-subtitle mt-[15px] sm:mt-0">
                         <button type="button" class="inline-block transition-all rounded-md font-medium px-[13px] py-[6px] text-primary-500 border border-primary-500 hover:bg-primary-500 hover:text-white" >
-                            <a href="pm-teams-task-add.html">
+                            <a href=<?= base_url("project-list/view/add-task")?>>
                             <span class="inline-block relative ltr:pl-[22px] rtl:pr-[22px]">
                                 <i class="material-symbols-outlined !text-[22px] absolute ltr:-left-[4px] rtl:-right-[4px] top-1/2 -translate-y-1/2">
                                     add
@@ -224,7 +224,7 @@
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
                     
 
                 <div class="trezo-card-content -mx-[20px] md:-mx-[25px]">
@@ -273,14 +273,14 @@
                                                 </a>
                                             </button>
                                             <button type="button" class="text-primary-500 leading-none custom-tooltip" id="customTooltip" data-text="View">
-                                                <a href=<?= base_url("Mentor/Menu/Project_list/pm-view-project-team") ?>>
+                                                <a href=<?= base_url("project-list/view") ?>>
                                                     <i class="material-symbols-outlined !text-md">
                                                         visibility
                                                     </i>
                                                 </a>
                                             </button>
                                             <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" data-text="Edit" id="edit-task">
-                                                <a href=<?= base_url("pm-teams-task-edit.html") ?>>
+                                                <a href=<?= base_url("project-list/view/edit-task") ?>>
                                                     <i class="material-symbols-outlined !text-md">
                                                         edit
                                                     </i>

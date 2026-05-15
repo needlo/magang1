@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 
         <!-- Favicon -->
-		<link rel="icon" type="image/png" href="assets/images/OtwLogo.png">
+		<link rel="icon" type="image/png" href="<?= base_url('assets/images/OtwLogo.png') ?>">
 
         <!-- Title -->
         <title>Trezo - Tailwind CSS Admin Dashboard Template</title>
@@ -45,7 +45,7 @@
             <!-- Breadcrumb -->
             <div class="mb-[25px] md:flex items-center justify-between">
                 <h5 class="!mb-0">
-                    Penilaian
+                    Sertifikat
                 </h5>
                 <ol class="breadcrumb mt-[12px] md:mt-0">
                     <li class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
@@ -60,81 +60,164 @@
                         Project Management
                     </li>
                     <li class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
-                        Penilaian
+                        Sertifikat
                     </li>
                 </ol>
             </div>
 
             <!-- Users -->
             <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
-                <div class="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
-                    <div class="trezo-card-title">
-                        <form class="relative sm:w-[265px]">
-                            <label class="leading-none absolute ltr:left-[13px] rtl:right-[13px] text-black dark:text-white mt-px top-1/2 -translate-y-1/2">
+                <div class="trezo-card-content mb-[25px]">
+                    <div class="table-responsive overflow-x-auto">
+                        <div class="flex justify-between items-center mb-[15px]">
+                            <h3 class="text-lg font-semibold text-black dark:text-white">
+                                Template Sertifikat
+                            </h3>
+                            <a href="<?= base_url('project-list/create') ?>" 
+                            class="inline-flex items-center gap-2 px-[16px] py-[8px] rounded-md bg-primary-500 text-white hover:bg-primary-400 shadow-sm transition">
+                                
                                 <i class="material-symbols-outlined !text-[20px]">
-                                    search
+                                    upload
                                 </i>
-                            </label>
-                            <input type="text" placeholder="Search user here....." class="bg-gray-50 border border-gray-50 h-[36px] text-xs rounded-md w-full block text-black pt-[11px] pb-[12px] ltr:pl-[38px] rtl:pr-[38px] ltr:pr-[13px] ltr:md:pr-[16px] rtl:pl-[13px] rtl:md:pl-[16px] placeholder:text-gray-500 outline-0 dark:bg-[#15203c] dark:text-white dark:border-[#15203c] dark:placeholder:text-gray-400">
-                        </form>
+
+                                Upload Sertifikat
+                            </a>
+                        </div>
+                        <table class="w-full">
+                            <thead class="text-black dark:text-white">
+                                <tr>
+                                    <th class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] bg-gray-50 dark:bg-[#15203c] whitespace-nowrap ltr:first:rounded-tl-md ltr:last:rounded-tr-md rtl:first:rounded-tr-md rtl:last:rounded-tl-md">
+                                        Template Sertifikat
+                                    </th>
+                                    <th class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] bg-gray-50 dark:bg-[#15203c] whitespace-nowrap ltr:first:rounded-tl-md ltr:last:rounded-tr-md rtl:first:rounded-tr-md rtl:last:rounded-tl-md">
+                                        Preview
+                                    </th>
+                                    <th class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] bg-gray-50 dark:bg-[#15203c] whitespace-nowrap ltr:first:rounded-tl-md ltr:last:rounded-tr-md rtl:first:rounded-tr-md rtl:last:rounded-tl-md">
+                                        Format
+                                    </th>
+                                    <th class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] bg-gray-50 dark:bg-[#15203c] whitespace-nowrap ltr:first:rounded-tl-md ltr:last:rounded-tr-md rtl:first:rounded-tr-md rtl:last:rounded-tl-md">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-black dark:text-white">
+                                <tr>
+                                    <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                        <div class="flex items-center">
+                                            <div class="ltr:ml-[12px] rtl:mr-[12px]">
+                                                <span class="block font-medium">
+                                                    Template Sertifikat 1
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                        <div class="w-[60px] h-[40px] overflow-hidden rounded-md border border-gray-200">
+                                            <img src="assets/images/users/sertifikat.png" 
+                                                class="w-full h-full object-cover" 
+                                                alt="preview">
+                                        </div>
+                                    </td>
+                                    <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                        <div class="flex items-center">
+                                            <div class="ltr:ml-[12px] rtl:mr-[12px]">
+                                                <span class="block font-medium">
+                                                    PNG
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                        <div class="flex items-center gap-[9px]">
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
+                                                <i class="material-symbols-outlined !text-md">
+                                                    visibility
+                                                </i>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
+                                                <i class="material-symbols-outlined !text-md">
+                                                    edit
+                                                </i>
+                                            </button>
+                                            <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
+                                                <i class="material-symbols-outlined !text-md">
+                                                    delete
+                                                </i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-[20px] py-[12px] md:py-[14px] rounded-b-md border-l border-r border-b border-gray-100 dark:border-[#172036] sm:flex sm:items-center justify-between">
+                        <p class="!mb-0 text-sm">
+                            Showing 1 of 36 results
+                        </p>
+                        <ol class="mt-[10px] sm:mt-0">
+                            <li class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                <a href="pm-users.html" class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                    <span class="opacity-0">
+                                        0
+                                    </span>
+                                    <i class="material-symbols-outlined left-0 right-0 absolute top-1/2 -translate-y-1/2">
+                                        chevron_left
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                <a href="pm-users.html" class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-primary-500 bg-primary-500 text-white">
+                                    1
+                                </a>
+                            </li>
+                            <li class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                <a href="pm-users.html" class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                    2
+                                </a>
+                            </li>
+                            <li class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                <a href="pm-users.html" class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                    3
+                                </a>
+                            </li>
+                            <li class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                <a href="pm-users.html" class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                    4
+                                </a>
+                            </li>
+                            <li class="inline-block mx-[1px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
+                                <a href="pm-users.html" class="w-[31px] h-[31px] block leading-[29px] relative text-center rounded-md border border-gray-100 dark:border-[#172036] transition-all hover:bg-primary-500 hover:text-white hover:border-primary-500">
+                                    <span class="opacity-0">
+                                        0
+                                    </span>
+                                    <i class="material-symbols-outlined left-0 right-0 absolute top-1/2 -translate-y-1/2">
+                                        chevron_right
+                                    </i>
+                                </a>
+                            </li>
+                        </ol>
                     </div>
                 </div>
 
-                <div class="trezo-card bg-white dark:bg-[#0c1427] p-[20px] md:p-[25px] rounded-md">
-                    <div class="trezo-card-header mb-[20px] md:mb-[25px] flex items-center justify-between">
+                <!-- Table sertifikat -->
+                <div class="flex justify-between items-center mb-[15px]">
+                    <h3 class="text-lg font-semibold text-black dark:text-white">
+                        Daftar Inter
+                    </h3>
+                </div>
+                <div class="trezo-card-content mb-[25px]">
+                    <div class="trezo-card-header mb-[20px] md:mb-[25px] sm:flex items-center justify-between">
                         <div class="trezo-card-title">
-                            <h5 class="!mb-0">
-                                Penilaian Intern
-                            </h5>   
+                            <form class="relative sm:w-[265px]">
+                                <label class="leading-none absolute ltr:left-[13px] rtl:right-[13px] text-black dark:text-white mt-px top-1/2 -translate-y-1/2">
+                                    <i class="material-symbols-outlined !text-[20px]">
+                                        search
+                                    </i>
+                                </label>
+                                <input type="text" placeholder="Search user here....." class="bg-gray-50 border border-gray-50 h-[36px] text-xs rounded-md w-full block text-black pt-[11px] pb-[12px] ltr:pl-[38px] rtl:pr-[38px] ltr:pr-[13px] ltr:md:pr-[16px] rtl:pl-[13px] rtl:md:pl-[16px] placeholder:text-gray-500 outline-0 dark:bg-[#15203c] dark:text-white dark:border-[#15203c] dark:placeholder:text-gray-400">
+                            </form>
                         </div>
                     </div>
-                    <div class="trezo-card-content">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-[25px]">
-                            <div>
-                                <div class="bg-primary-50 dark:bg-[#15203c] rounded-md py-[22px] px-[20px]">
-                                    <div class="flex items-center">
-                                        <div class="text-primary-500 leading-none ltr:mr-[10px] rtl:ml-[10px]">
-                                            <i class="material-symbols-outlined !text-5xl">
-                                                order_approve
-                                            </i>
-                                        </div>
-                                        <div>
-                                            <span class="block">
-                                                Total Intern Yang di Nilai
-                                            </span>
-                                            <h5 class="!mb-0 !text-[20px] mt-[2px]">
-                                                8
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="bg-success-50 dark:bg-[#15203c] rounded-md py-[22px] px-[20px]">
-                                    <div class="flex items-center">
-                                        <div class="text-success-500 leading-none ltr:mr-[10px] rtl:ml-[10px]">
-                                            <i class="material-symbols-outlined !text-5xl">
-                                                pending_actions
-                                            </i>
-                                        </div>
-                                        <div>
-                                            <span class="block">
-                                                Intern yang belum dinilai
-                                            </span>
-                                            <h5 class="!mb-0 !text-[20px] mt-[2px]">
-                                                135
-                                            </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trezo-card-content">
                     <div class="table-responsive overflow-x-auto">
                         <table class="w-full">
                             <thead class="text-black dark:text-white">
@@ -146,10 +229,7 @@
                                         Tim
                                     </th>
                                     <th class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] bg-gray-50 dark:bg-[#15203c] whitespace-nowrap ltr:first:rounded-tl-md ltr:last:rounded-tr-md rtl:first:rounded-tr-md rtl:last:rounded-tl-md">
-                                        Nilai akhir
-                                    </th>
-                                    <th class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] bg-gray-50 dark:bg-[#15203c] whitespace-nowrap ltr:first:rounded-tl-md ltr:last:rounded-tr-md rtl:first:rounded-tr-md rtl:last:rounded-tl-md">
-                                        Feedback
+                                        Sertifikat
                                     </th>
                                     <th class="font-medium ltr:text-left rtl:text-right px-[20px] py-[11px] bg-gray-50 dark:bg-[#15203c] whitespace-nowrap ltr:first:rounded-tl-md ltr:last:rounded-tr-md rtl:first:rounded-tr-md rtl:last:rounded-tl-md">
                                         Action
@@ -161,7 +241,7 @@
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center">
                                             <div class="rounded-md w-[40px] rounded-full">
-                                                <img src=<?= base_url("assets/images/users/user6.jpg")?> class="inline-block rounded-full" alt="product-image">
+                                                <img src="assets/images/users/user6.jpg" class="inline-block rounded-full" alt="product-image">
                                             </div>
                                             <div class="ltr:ml-[12px] rtl:mr-[12px]">
                                                 <span class="block font-medium">
@@ -174,17 +254,25 @@
                                         Hotel Management System, <br> Python Upgrade
                                     </td>
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        - -
+                                        <i class="material-symbols-outlined !text-md">
+                                                    file_present
+                                        </i>
+                                            file.pdf
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Mohon Untuk menyelesaikan <br> project terlebih dahulu sebelum deadline
-                                    </td>
+                                    
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri nilai">
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href=<?= base_url("sertifikat/generate") ?>>
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
                                                 <a href="pm-user-edit.html">
                                                     <i class="material-symbols-outlined !text-md">
-                                                      Rate_review  
+                                                      edit  
                                                     </i>
                                                 </a>
                                             </button>
@@ -200,7 +288,7 @@
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center">
                                             <div class="rounded-md w-[40px] rounded-full">
-                                                <img src=<?= base_url("assets/images/users/user7.jpg")?> class="inline-block rounded-full" alt="product-image">
+                                                <img src="assets/images/users/user7.jpg" class="inline-block rounded-full" alt="product-image">
                                             </div>
                                             <div class="ltr:ml-[12px] rtl:mr-[12px]">
                                                 <span class="block font-medium">
@@ -212,18 +300,24 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         Web Development
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        90
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Bagus, terus pertahankan performa kamu
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                        No file
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beli Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -237,7 +331,7 @@
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center">
                                             <div class="rounded-md w-[40px] rounded-full">
-                                                <img src=<?= base_url("assets/images/users/user8.jpg")?> class="inline-block rounded-full" alt="product-image">
+                                                <img src="assets/images/users/user8.jpg" class="inline-block rounded-full" alt="product-image">
                                             </div>
                                             <div class="ltr:ml-[12px] rtl:mr-[12px]">
                                                 <span class="block font-medium">
@@ -249,18 +343,27 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         Networking
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        - -
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Mohon Untuk menyelesaikan <br> project terlebih dahulu sebelum deadline
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                            <i class="material-symbols-outlined !text-md">
+                                                        file_present
+                                            </i>
+                                                file.pdf
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -274,7 +377,7 @@
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center">
                                             <div class="rounded-md w-[40px] rounded-full">
-                                                <img src=<?= base_url("assets/images/users/user9.jpg")?> class="inline-block rounded-full" alt="product-image">
+                                                <img src="assets/images/users/user9.jpg" class="inline-block rounded-full" alt="product-image">
                                             </div>
                                             <div class="ltr:ml-[12px] rtl:mr-[12px]">
                                                 <span class="block font-medium">
@@ -286,18 +389,27 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         UI/UX Design
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        85
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Bagus sekali, terus tingkatkan lagi performa kamu
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                            <i class="material-symbols-outlined !text-md">
+                                                        file_present
+                                            </i>
+                                                file.pdf
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -323,18 +435,27 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         QA Tester
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        --
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Mohon Untuk menyelesaikan <br> project terlebih dahulu sebelum deadline
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                            <i class="material-symbols-outlined !text-md">
+                                                        file_present
+                                            </i>
+                                                file.pdf
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -360,18 +481,24 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         Frontend Developer
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        - -
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Mohon Untuk menyelesaikan <br> project terlebih dahulu sebelum deadline
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                        No file
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -397,18 +524,27 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         UI / UX Desainger
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        - -
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Mohon Untuk menyelesaikan <br> project terlebih dahulu sebelum deadline
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                            <i class="material-symbols-outlined !text-md">
+                                                        file_present
+                                            </i>
+                                                file.pdf
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -434,18 +570,27 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         Frontend Developer
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        90
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Bagus, terus pertahankan performa kamu
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                            <i class="material-symbols-outlined !text-md">
+                                                        file_present
+                                            </i>
+                                                file.pdf
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -471,18 +616,27 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         Backend Developer
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        80
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Cukup baik, tingkatkan lagi performa kamu
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                            <i class="material-symbols-outlined !text-md">
+                                                        file_present
+                                            </i>
+                                                file.pdf
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -508,18 +662,27 @@
                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         Sistem Informasi
                                     </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        - -
-                                    </td>
-                                    <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
-                                        Mohon Untuk menyelesaikan <br> project terlebih dahulu sebelum deadline
+                                     <td class="text-gray-500 dark:text-gray-400 ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
+                                            <i class="material-symbols-outlined !text-md">
+                                                        file_present
+                                            </i>
+                                                file.pdf
                                     </td>
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
-                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri Nilai">
-                                                <i class="material-symbols-outlined !text-md">
-                                                    Rate_review
-                                                </i>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Generate Sertifikat">
+                                                <a href="pm-sertifikat-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      upload  
+                                                    </i>
+                                                </a>
+                                            </button>
+                                            <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="edit sertifikat">
+                                                <a href="pm-user-edit.html">
+                                                    <i class="material-symbols-outlined !text-md">
+                                                      edit  
+                                                    </i>
+                                                </a>
                                             </button>
                                             <button type="button" class="text-danger-500 leading-none custom-tooltip" id="customTooltip" data-text="Hapus">
                                                 <i class="material-symbols-outlined !text-md">
@@ -720,16 +883,16 @@
         </div>
         
         <!-- Links Of JS File -->
-        <script src="<?= base_url('assets/js/apexcharts.min.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/fslightbox.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/simplebar.min.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/prism.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/clipboard.min.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/swiper-bundle.min.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/fullcalendar.min.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/jsvectormap.min.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/world-merc.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/quill.min.js'); ?>"></script>
-        <script src="<?= base_url('assets/js/custom.js'); ?>"></script>
+        <script src="assets/js/apexcharts.min.js"></script>
+        <script src="assets/js/fslightbox.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/prism.js"></script>
+        <script src="assets/js/clipboard.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/fullcalendar.min.js"></script>
+        <script src="assets/js/jsvectormap.min.js"></script>
+        <script src="assets/js/world-merc.js"></script>
+        <script src="assets/js/quill.min.js"></script>
+        <script src="assets/js/custom.js"></script>
     </body>
 </html>

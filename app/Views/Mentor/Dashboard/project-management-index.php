@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 
         <!-- Favicon -->
-		<link rel="icon" type="image/png" href="assets/images/OtwLogo.png">
+		<link rel="icon" type="image/png" href=<?= base_url("assets/images/OtwLogo.png") ?>>
 
         <!-- Title -->
         <title>Mentor-Magang-Dashboard</title>
@@ -36,7 +36,7 @@
         <!-- End Sidebar -->
 
         <!-- Header -->
-        <?= $this->include('Layout/header') ?>
+        <?= $this->include('Layout/Header') ?>
         <!-- End Header -->
 
         <!-- Main Content -->

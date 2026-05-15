@@ -16,10 +16,10 @@
         <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 
         <!-- Favicon -->
-		<link rel="icon" sizes="512x512" type="image/png" href="assets/images/OtwLogo.png">
+		<link rel="icon" type="image/png" href=<?= base_url("assets/images/OtwLogo.png") ?>>
 
         <!-- Title -->
-        <title>Penilaian</title>
+        <title>Trezo - Tailwind CSS Admin Dashboard Template</title>
 
         <!-- Font Family -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,11 +32,11 @@
     <body>
 
         <!-- Sidebar -->
-        <?= $this->include('Mentor/Layout/Sidebar') ?>
+        <?= $this->include('Layout/Sidebar') ?>
         <!-- End Sidebar -->
 
         <!-- Header -->
-        <?= $this->include('Mentor/Layout/header') ?>
+        <?= $this->include('Layout/header') ?>
         <!-- End Header -->
 
         <!-- Main Content -->
@@ -45,11 +45,11 @@
             <!-- Breadcrumb -->
             <div class="mb-[25px] md:flex items-center justify-between">
                 <h5 class="!mb-0">
-                    Penilaian
+                    Tugas Baru
                 </h5>
                 <ol class="breadcrumb mt-[12px] md:mt-0">
                     <li class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
-                        <a href="project-management-index.html" class="inline-block relative ltr:pl-[22px] rtl:pr-[22px] transition-all hover:text-primary-500">
+                        <a href="index.html" class="inline-block relative ltr:pl-[22px] rtl:pr-[22px] transition-all hover:text-primary-500">
                             <i class="material-symbols-outlined absolute ltr:left-0 rtl:right-0 !text-lg -mt-px text-primary-500 top-1/2 -translate-y-1/2">
                                 home
                             </i>
@@ -60,32 +60,63 @@
                         Project Management
                     </li>
                     <li class="breadcrumb-item inline-block relative text-sm mx-[11px] ltr:first:ml-0 rtl:first:mr-0 ltr:last:mr-0 rtl:last:ml-0">
-                        Edit Project
+                        Create Project
                     </li>
                 </ol>
             </div>
 
-            <!-- Edit Project -->
+            <!-- Create Project -->
             <form>
                 <div class="trezo-card bg-white dark:bg-[#0c1427] mb-[25px] p-[20px] md:p-[25px] rounded-md">
                     <div class="trezo-card-content">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-[20px] md:gap-[25px]">
                             <div class="sm:col-span-2">
                                 <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                    Input nilai
+                                     Nama Tugas
                                 </label>
-                                 <input type="text" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500" placeholder="Input Nilai">
+                                <input type="text" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500" placeholder="Nama Tugas">
                             </div>
                             <div class="sm:col-span-2">
                                 <label class="mb-[10px] text-black dark:text-white font-medium block">
-                                    Deskripsi Project
+                                    Project Files
+                                </label>
+                                <div id="fileUploader">
+                                    <div class="relative flex items-center justify-center overflow-hidden rounded-md py-[88px] px-[20px] border border-gray-200 dark:border-[#172036]">
+                                        <div class="flex items-center justify-center">
+                                            <div class="w-[35px] h-[35px] border border-gray-100 dark:border-[#15203c] flex items-center justify-center rounded-md text-primary-500 text-lg ltr:mr-[12px] rtl:ml-[12px]">
+                                                <i class="ri-upload-2-line"></i>
+                                            </div>
+                                            <p class="!leading-[1.5]">
+                                                <strong class="text-black dark:text-white">Click to upload</strong><br> you file here
+                                            </p>
+                                        </div>
+                                        <input type="file" id="fileInput" class="absolute top-0 left-0 right-0 bottom-0 rounded-md z-[1] opacity-0 cursor-pointer">
+                                    </div>
+                                    <ul id="fileList"></ul>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Tanggal Mulai
+                                </label>
+                                <input type="date" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500">
+                            </div>
+                            <div>
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Deadline
+                                </label>
+                                <input type="date" class="h-[55px] rounded-md text-black dark:text-white border border-gray-200 dark:border-[#172036] bg-white dark:bg-[#0c1427] px-[17px] block w-full outline-0 transition-all placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-primary-500">
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label class="mb-[10px] text-black dark:text-white font-medium block">
+                                    Deskripsi Tugas
                                 </label>
                                 <div id="richTextEditor" class="!h-[179px]"></div>
                             </div>
                         </div>
                         <div class="mt-[20px] md:mt-[25px]">
                             <button type="button" class="font-medium inline-block transition-all rounded-md md:text-md ltr:mr-[15px] rtl:ml-[15px] py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-danger-500 text-white hover:bg-danger-400">
-                                <a href="pm-teams.html" >
+                                <a href=<?= base_url("project-list/view")?>>
                                     Batal
                                 </a>
                             </button>
@@ -94,7 +125,7 @@
                                     <i class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
                                         add
                                     </i>
-                                    Simpan
+                                    Buat Tugas
                                 </span>
                             </button>
                         </div>

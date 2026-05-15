@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 
         <!-- Favicon -->
-		<link rel="icon" type="image/png" href="assets/images/OtwLogo.png">
+		<link rel="icon" type="image/png" href=<?= base_url("assets/images/OtwLogo.png") ?>>
 
         <!-- Title -->
         <title>Trezo - Tailwind CSS Admin Dashboard Template</title>
@@ -73,7 +73,7 @@
                         </h5>
                     </div>
                     <div class="trezo-card-subtitle mt-[15px] sm:mt-0">
-                        <a href=<?= base_url("mentor/create")?> class="inline-block transition-all rounded-md font-medium px-[13px] py-[6px] text-primary-500 border border-primary-500 hover:bg-primary-500 hover:text-white">
+                        <a href=<?= base_url("project-list/create")?> class="inline-block transition-all rounded-md font-medium px-[13px] py-[6px] text-primary-500 border border-primary-500 hover:bg-primary-500 hover:text-white">
                             <span class="inline-block relative ltr:pl-[22px] rtl:pr-[22px]">
                                 <i class="material-symbols-outlined !text-[22px] absolute ltr:-left-[4px] rtl:-right-[4px] top-1/2 -translate-y-1/2">
                                     add
