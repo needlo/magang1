@@ -69,33 +69,59 @@ if (sidebarAreaID) {
 }
 
     // Hide Sidebar Toggle
-    const hideSidebarToggleID = document.getElementById("hide-sidebar-toggle");
-    if (hideSidebarToggleID) {
-        // Select the button and the target divs
-        const toggleButton1 = document.getElementById('hide-sidebar-toggle');
-        const toggleButton2 = document.getElementById('hide-sidebar-toggle2');
-        const targetDiv1 = document.getElementById('sidebar-area');
-        const targetDiv2 = document.getElementById('main-content');
-        const targetDiv3 = document.getElementById('header-area');
-        
-        // Add click event for the first button to toggle 'active' class on the first two divs
-        toggleButton1.addEventListener('click', function() {
-            // Toggle the 'active' class on the button
+    // Ambil tombol toggle sidebar
+    const toggleButton1 = document.getElementById('hide-sidebar-toggle');
+    const toggleButton2 = document.getElementById('hide-sidebar-toggle2');
+
+    // Ambil area yang akan diberi class active
+    const targetDiv1 = document.getElementById('sidebar-area');
+    const targetDiv2 = document.getElementById('main-content');
+    const targetDiv3 = document.getElementById('header-area');
+
+
+    // Cek apakah semua elemen untuk tombol pertama tersedia
+    if (toggleButton1 && targetDiv1 && targetDiv2 && targetDiv3) {
+
+        // Event ketika tombol pertama diklik
+        toggleButton1.addEventListener('click', function () {
+
+            // Toggle class active pada tombol
             toggleButton1.classList.toggle('active');
-            // Toggle the 'active' class on the first two divs
+
+            // Toggle class active pada sidebar
             targetDiv1.classList.toggle('active');
+
+            // Toggle class active pada main content
             targetDiv2.classList.toggle('active');
+
+            // Toggle class active pada header
             targetDiv3.classList.toggle('active');
+
         });
-        // Add click event for the second button to toggle 'active' class on the other two divs
-        toggleButton2.addEventListener('click', function() {
-            // Toggle the 'active' class on the button
+
+    }
+
+
+    // Cek apakah semua elemen untuk tombol kedua tersedia
+    if (toggleButton2 && targetDiv1 && targetDiv2 && targetDiv3) {
+
+        // Event ketika tombol kedua diklik
+        toggleButton2.addEventListener('click', function () {
+
+            // Toggle class active pada tombol
             toggleButton2.classList.toggle('active');
-            // Toggle the 'active' class on the second set of divs
+
+            // Toggle class active pada sidebar
             targetDiv1.classList.toggle('active');
+
+            // Toggle class active pada main content
             targetDiv2.classList.toggle('active');
+
+            // Toggle class active pada header
             targetDiv3.classList.toggle('active');
+
         });
+
     }
 
     // Dropdown Menu

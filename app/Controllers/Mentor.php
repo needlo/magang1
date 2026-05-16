@@ -12,7 +12,7 @@ class Mentor extends BaseController
     }
 
     //dashboard
-    public function dashboard()
+    public function dashboard_mentor()
     {
         return view('Mentor/Dashboard/project-management-index');
     }

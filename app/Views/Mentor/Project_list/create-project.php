@@ -127,17 +127,17 @@
                             </div>
                         </div>
                         <div class="mt-[20px] md:mt-[25px]">
-                                <button type="button" onclick="window.location.href='<?= base_url('mentor/project-list') ?>'" class="font-medium inline-block transition-all rounded-md md:text-md ltr:mr-[15px] rtl:ml-[15px] py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-danger-500 text-white hover:bg-danger-400">
-                                        Batal
-                                </button>
-                                <button type="button" class="font-medium inline-block transition-all rounded-md md:text-md py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-primary-500 text-white hover:bg-primary-400">
-                                    <span class="inline-block relative ltr:pl-[29px] rtl:pr-[29px]">
-                                        <i class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
-                                            add
-                                        </i>
-                                        Buat Project
-                                    </span>
-                                </button>
+                            <button type="button" onclick="window.location.href='<?= base_url('mentor/project-list') ?>'" class="font-medium inline-block transition-all rounded-md md:text-md ltr:mr-[15px] rtl:ml-[15px] py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-danger-500 text-white hover:bg-danger-400">
+                                    Batal
+                            </button>
+                            <button type="button" class="font-medium inline-block transition-all rounded-md md:text-md py-[10px] md:py-[12px] px-[20px] md:px-[22px] bg-primary-500 text-white hover:bg-primary-400">
+                                <span class="inline-block relative ltr:pl-[29px] rtl:pr-[29px]">
+                                    <i class="material-symbols-outlined ltr:left-0 rtl:right-0 absolute top-1/2 -translate-y-1/2">
+                                        add
+                                    </i>
+                                    Buat Project
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
