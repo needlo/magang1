@@ -66,7 +66,7 @@ $currentPage = uri_string();
                                 Evaluasi
                             </span>
                         </button>
-                        <div class="accordion-collapse <?= in_array($currentPage, ['dashboard','project-list','penilaian','sertifikat']) ? '' : 'hidden' ?>">
+                        <div class="accordion-collapse <?= in_array($currentPage, ['dashboard','penilaian','sertifikat']) ? '' : 'hidden' ?>">
                             <div class="pt-[4px]">
                                 <ul class="sidebar-sub-menu" id="dashboardItemsList">
                                     <li class="sidemenu-item mb-[4px] last:mb-0">

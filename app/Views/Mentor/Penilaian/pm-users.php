@@ -182,7 +182,7 @@
                                     <td class="ltr:text-left rtl:text-right whitespace-nowrap px-[20px] py-[15px] border-b border-gray-100 dark:border-[#172036] ltr:first:border-l ltr:last:border-r rtl:first:border-r rtl:last:border-l">
                                         <div class="flex items-center gap-[9px]">
                                             <button type="button" class="text-gray-500 dark:text-gray-400 leading-none custom-tooltip" id="customTooltip" data-text="Beri nilai">
-                                                <a href="pm-user-edit.html">
+                                                <a href="<?= base_url('penilaian/edit') ?>">
                                                     <i class="material-symbols-outlined !text-md">
                                                       Rate_review  
                                                     </i>

@@ -82,7 +82,7 @@
                             Lupa Kata Sandi?
                         </a>
                         <button type="submit" class="md:text-md block w-full text-center transition-all rounded-md font-medium mt-[20px] md:mt-[25px] py-[12px] px-[25px] text-white bg-primary-500 hover:bg-primary-400">
-                            <a href=<?= base_url("form-biodata") ?>>
+                            <a href=<?= base_url("pendaftaran") ?>>
                             <span class="flex items-center justify-center gap-[5px]">
                                 <i class="material-symbols-outlined">
                                     login

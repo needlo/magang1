@@ -32,11 +32,11 @@
     <body>
 
         <!-- Sidebar -->
-        <?= $this->include('Mentor/Layout/Sidebar') ?>
+        <?= $this->include('Layout/Sidebar') ?>
         <!-- End Sidebar -->
 
         <!-- Header -->
-        <?= $this->include('Mentor/Layout/header') ?>
+        <?= $this->include('Layout/header') ?>
         <!-- End Header -->
 
         <!-- Main Content -->

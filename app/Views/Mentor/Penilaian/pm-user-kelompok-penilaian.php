@@ -126,7 +126,7 @@
                         </div>
                     </div>
 
-                    <a href="<?= base_url('pm-users.html') ?>"
+                    <a href="<?= base_url('penilaian/kelompok') ?>"
                     class="block text-center bg-primary-500 hover:bg-primary-400 transition-all text-white rounded-md py-[10px] font-medium">
 
                         Lihat Penilaian
