@@ -54,40 +54,69 @@
 <body class="bg-[#f5f6fa] dark:bg-[#15203c]">
 
     <!-- Header -->
-    <?= $this->include('Layout/Header/intern') ?>
+    <?= $this->include('Layout/Header/intern-form-daftar') ?>
     <!-- End Header -->
 
     <!-- Main Content -->
+    ```php
     <div class="main-content transition-all flex flex-col overflow-hidden min-h-screen !ml-0 !w-full pt-[90px] px-[20px] md:px-[25px]"
         id="main-content">
 
         <div id="step-3" class="max-w-2xl mx-auto transition-all duration-300 w-full mb-[25px]">
+
             <div class="trezo-card-content md:pb-[75px] text-center">
-                <img src=<?= base_url("assets/images/form/hourglass.png") ?> style="width: 280px; max-width: 100%; height: auto;"
-                    class="inline-block" alt="internal-error-image">
-                <h4 class="!text-[19px] md:!text-[21px] mt-[25px] md:mt-[33px] !mb-[11px]">
+
+                <img src="<?= base_url('assets/images/form/hourglass.png') ?>"
+                    style="width: 280px; max-width: 100%; height: auto;" class="inline-block" alt="waiting-image">
+
+                <h4 class="!text-[19px] md:!text-[21px] mt-[25px] md:mt-[33px] !mb-[15px]">
+
                     Biodata dan dokumen anda sedang kami tinjau.
+
                 </h4>
-                <p>
+
+                <!-- STATUS -->
+                <div class="mb-[18px]">
+
+                    <span
+                        class="inline-block bg-warning-100 text-warning-600 px-[18px] py-[8px] rounded-full font-semibold text-sm">
+
+                        Status: Waiting
+
+                    </span>
+
+                </div>
+
+                <p class="text-gray-500 dark:text-gray-400">
+
                     Silahkan menunggu konfirmasi dari kami.
+
                 </p>
-                <a href=<?= base_url('pendaftaran/upload-file') ?> class="inline-block font-medium rounded-md md:text-md mt-[2px] md:mt-[12px] py-[12px] px-[25px] text-white bg-primary-500 transition-all hover:bg-primary-400">
-                    Kembali
+
+                <a href="<?= base_url('logout') ?>"
+                    class="inline-block font-medium rounded-md md:text-md mt-[25px] py-[12px] px-[25px] text-white bg-danger-500 transition-all hover:bg-danger-400">
+
+                    Logout
+
                 </a>
+
             </div>
+
         </div>
 
         <div class="grow"></div>
 
-        <!-- Footer -->
-        <footer
-            class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
-            <p>
-                © 2026 <span class="text-purple-500 font-medium">Sistem Informasi Magang</span> | Hak Cipta Dilindungi
-                oleh <a href="#" class="text-primary-500 transition-all hover:underline">CV OTW Computer Gusaha</a>
-            </p>
-        </footer>
-        <!-- End Footer -->
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#0c1427] rounded-t-md px-[20px] md:px-[25px] py-[15px] md:py-[20px] text-center">
+        <p>
+            © 2026 <span class="text-purple-500 font-medium">Sistem Informasi Magang</span> | Hak Cipta Dilindungi
+            oleh <a href="#" class="text-primary-500 transition-all hover:underline">CV OTW Computer Gusaha</a>
+        </p>
+    </footer>
+    <!-- End Footer -->
 
     </div>
     <!-- End Main Content -->
