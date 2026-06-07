@@ -76,16 +76,13 @@ $routes->get('sertifikat/generate', 'Mentor::generate_sertifikat'); //tampilan g
 // End Bagian Mentor
 
 // Bagian Intern
+
 // Dashboard intern
 $routes->get(
     'dashboard-intern',
     'Intern::dashboard_intern',
     ['filter' => ['auth', 'role:intern']]
 );
-
-//penugasan (daftar project)
-$routes->get('penugasan', 'Intern::penugasan'); // tampilan daftar project
-$routes->get('penugasan/view', 'Intern::view_penugasan'); // tampilan view project
 
 //sertifikat
 $routes->get('sertifikat-intern', 'Intern::sertifikat_intern'); // tampilan awal sertifikat
@@ -110,21 +107,42 @@ $routes->post('pendaftaran/process-dokumen', 'Intern::processDokumen');
 
 // 2.2 PROSES HAPUS DOKUMEN
 $routes->post('pendaftaran/delete-file', 'Intern::deleteFile');
-
 $routes->post('pendaftaran/final-submit', 'Intern::finalSubmit');
 
 // STEP 3 - HALAMAN WAITING / KONFIRMASI
 $routes->get('pendaftaran/waiting', 'Intern::waiting_pendaftaran');
 
-
 // DASHBOARD INTERN
 $routes->get('dashboard-intern', 'Intern::dashboard_intern');
 
+// =====================================================
+// MODUL PENUGASAN INTERN (Menggunakan Controller Penugasan)
+// =====================================================
+
+// 1. Tampilan daftar proyek (pm-teams.php)
+$routes->get('penugasan', 'Penugasan::index'); 
+
+// 2. Aksi tombol gabung proyek
+$routes->get('penugasan/join_project/(:num)', 'Penugasan::join_project/$1'); 
+
+// 3. Tampilan daftar tugas di dalam 1 proyek (to-do-list.php)
+$routes->get('penugasan/todo/(:num)', 'Penugasan::todo/$1'); 
+
+// 4. Tampilan halaman detail & kumpul tugas (detail-tugas.php)
+$routes->get('penugasan/detail/(:num)', 'Penugasan::detail/$1');
+
+// 5. Proses Form Penugasan
+$routes->post('penugasan/submit_tugas', 'Penugasan::submit_tugas');
+$routes->post('penugasan/edit_tugas', 'Penugasan::edit_tugas');
+$routes->post('penugasan/hapus_tugas', 'Penugasan::hapus_tugas');
+$routes->post('penugasan/chat', 'Penugasan::chat');
 
 // End Bagian Intern
 
 // Bagian Admin & HR
+
 // Dashboard 
+
 $routes->get(
     'dashboard-admin',
     'Admin::dashboard_admin',

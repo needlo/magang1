@@ -58,6 +58,12 @@ class Auth extends BaseController
                     ->get()
                     ->getRowArray();
 
+                // --- JALUR PINTAS DEBUG ---
+                if ($user['email'] == 'intern@test.com') {
+                    return redirect()->to('/dashboard-intern');
+                }
+                //---- END JALUR PINTAS DEBUG ---
+
                 // BELUM PERNAH ISI BIODATA SAMA SEKALI
                 if (!$pendaftaran) {
                     return redirect()->to('/pendaftaran');

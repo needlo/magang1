@@ -12,23 +12,7 @@ class Intern extends BaseController
     {
         return view('Intern/Dashboard/lms-index');
     }
-
-
-    // =====================================================
-    // PENUGASAN
-    // =====================================================
-
-    public function penugasan()
-    {
-        return view('Intern/Penugasan/pm-teams');
-    }
-
-    public function view_penugasan()
-    {
-        return view('Intern/Penugasan/to-do-list');
-    }
-
-
+    
     // =====================================================
     // SERTIFIKAT
     // =====================================================
@@ -628,6 +612,52 @@ class Intern extends BaseController
 
         return view('Intern/From_Daftar/form-konfirmasi', [
             'pendaftaran' => $pendaftaran
+        ]);
+    }
+
+    // =====================================================
+    // HALAMAN DETAIL TUGAS
+    // =====================================================
+    public function detail_tugas($id)
+    {
+        $db = \Config\Database::connect();
+        $userId = session()->get('id');
+
+        // 1. Ambil data tugas + nama mentor
+        $task = $db->table('tasks')
+            ->select('tasks.*, users.name as mentor_name')
+            ->join('users', 'users.id = tasks.created_by', 'left')
+            ->where('tasks.id', $id)
+            ->get()
+            ->getRowArray();
+
+        // Jika tugas tidak ditemukan, kembalikan ke list
+        if (!$task) {
+            return redirect()->to('/penugasan/todo')->with('error', 'Tugas tidak ditemukan.');
+        }
+
+        // 2. Cek apakah intern sudah mengumpulkan tugas ini
+        $submission = $db->table('task_submissions')
+            ->where('task_id', $id)
+            ->where('submitted_by', $userId)
+            ->get()
+            ->getRowArray();
+
+        // 3. Hitung Waktu Tersisa (Sederhana)
+        $deadlineDate = new \DateTime($task['deadline']);
+        $today = new \DateTime();
+
+        if ($today > $deadlineDate) {
+            $waktuTersisa = "Waktu Habis";
+        } else {
+            $diff = $today->diff($deadlineDate);
+            $waktuTersisa = $diff->d . " Hari " . $diff->h . " Jam";
+        }
+
+        return view('Intern/Penugasan/detail-tugas', [
+            'task' => $task,
+            'submission' => $submission,
+            'waktuTersisa' => $waktuTersisa
         ]);
     }
 }
