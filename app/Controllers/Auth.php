@@ -22,17 +22,16 @@ class Auth extends BaseController
 
         // Cari user
         $user = $model->where('email', $email)->first();
-
+        
         // Verifikasi login
         if ($user && password_verify($password, $user['password'])) {
 
-            // =========================
-            // BLOKIR JIKA BELUM AKTIF
-            // =========================
-            if ($user['is_active'] == 0) {
-                return redirect()->back()
-                    ->withInput()
-                    ->with('error', 'Akun kamu belum aktif. Silakan cek email untuk memverifikasi pendaftaran.');
+            // =======================================
+            // BLOKIR JIKA BELUM AKTIF (KHUSUS INTERN)
+            // =======================================
+            // Blokir khusus intern
+            if ($user['role'] == 'intern' && $user['is_active'] == 0) {
+                return redirect()->back()->with('error', 'Akun kamu belum diverifikasi!');
             }
 
             // =========================

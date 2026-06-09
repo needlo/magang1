@@ -81,7 +81,7 @@
                     </div>
                     <div
                         class="sm:absolute sm:top-1/2 sm:-translate-y-1/2 sm:ltr:-right-[15px] sm:rtl:-left-[15px] sm:-mt-[8px] sm:max-w-[285px]">
-                        <img src="assets/images/online-learning.gif" alt="online-learning-image">
+                        <img src="assets\images\online-learning.gif" alt="online-learning-image">
                     </div>
                 </div>
             </div>

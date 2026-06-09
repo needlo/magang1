@@ -9,14 +9,17 @@ use CodeIgniter\Router\RouteCollection;
 // $routes->get('/
 // ', 'Home::index');
 
-// bagian profile
-$routes->get('my-profile', 'Profile::Profile'); // tampilan profile
-// selesai bagian profile
+// Bagian Profile
+$routes->get('my-profile', 'Profile::index');
 
-// bagian setting
-$routes->get('setting', 'Setting::Setting'); // tampilan setting
-$routes->get('setting/ganti-password', 'Setting::ganti_password'); // tampilan ganti password
-// selesai bagian setting
+// Bagian Setting
+$routes->get('setting', 'Setting::index');
+$routes->get('setting/ganti-password', 'Setting::ganti_password');
+$routes->post('setting/update_profile', 'Setting::update_profile'); // Jangan lupa tambahkan rute POST ini
+
+// Bagian Change Password
+$routes->get('change-password', 'Setting::ganti_password');
+$routes->post('change-password', 'Setting::proses_ganti_password');
 
 // bagian auth
 $routes->get('login', 'Auth::login'); // tampilan login
@@ -120,13 +123,13 @@ $routes->get('dashboard-intern', 'Intern::dashboard_intern');
 // =====================================================
 
 // 1. Tampilan daftar proyek (pm-teams.php)
-$routes->get('penugasan', 'Penugasan::index'); 
+$routes->get('penugasan', 'Penugasan::index');
 
 // 2. Aksi tombol gabung proyek
-$routes->get('penugasan/join_project/(:num)', 'Penugasan::join_project/$1'); 
+$routes->get('penugasan/join_project/(:num)', 'Penugasan::join_project/$1');
 
 // 3. Tampilan daftar tugas di dalam 1 proyek (to-do-list.php)
-$routes->get('penugasan/todo/(:num)', 'Penugasan::todo/$1'); 
+$routes->get('penugasan/todo/(:num)', 'Penugasan::todo/$1');
 
 // 4. Tampilan halaman detail & kumpul tugas (detail-tugas.php)
 $routes->get('penugasan/detail/(:num)', 'Penugasan::detail/$1');

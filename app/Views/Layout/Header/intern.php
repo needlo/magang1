@@ -1,4 +1,27 @@
-        <!-- Header -->
+<?php
+        // Mengambil data user yang sedang login
+        $db = \Config\Database::connect();
+        $session_id = session()->get('id');
+
+        $currentUser = $db->table('users')->where('id', $session_id)->get()->getRowArray();
+
+        $currentIntern = null;
+        if ($currentUser && $currentUser['role'] == 'intern') {
+            $currentIntern = $db->table('internship_applications')->where('user_id', $session_id)->get()->getRowArray();
+        }
+
+        // Memecah nama untuk nama panggilan (di sebelah foto kecil)
+        $namaLengkap = $currentUser['name'] ?? 'Peserta';
+        $namaDepan = explode(' ', trim($namaLengkap))[0];
+
+        // Menentukan foto profil
+        $fotoProfil = !empty($currentUser['photo']) ? base_url('uploads/profiles/' . $currentUser['photo']) : base_url('assets/images/profil-kosong.png');
+
+        // Menentukan posisi (jika intern ambil dari minat_posisi, jika bukan ambil dari role-nya)
+        $posisi = ($currentUser['role'] == 'intern') ? ($currentIntern['minat_posisi'] ?? 'Peserta Magang') : $currentUser['role'];
+        ?>
+
+        <!-- Header Start -->
        <div class="header-area bg-white dark:bg-[#0c1427] py-[13px] px-[20px] md:px-[25px] fixed top-0 z-[6] rounded-b-md transition-all" id="header-area">
             <div class="md:flex md:items-center md:justify-between">
                 <div class="flex items-center justify-center md:justify-normal">
@@ -36,27 +59,33 @@
                     </li>
                     <li class="relative profile-menu mx-[8px] md:mx-[10px] lg:mx-[12px] ltr:first:ml-0 ltr:last:mr-0 rtl:first:mr-0 rtl:last:ml-0">
                         <button type="button" class="flex items-center -mx-[5px] relative ltr:pr-[14px] rtl:pl-[14px] text-black dark:text-white" id="dropdownToggleBtn">
-                            <img src=<?= base_url("assets/images/admin.png") ?> class="w-[35px] h-[35px] md:w-[42px] md:h-[42px] rounded-full ltr:md:mr-[2px] ltr:lg:mr-[8px] rtl:md:ml-[2px] rtl:lg:ml-[8px] border-[2px] border-primary-200 inline-block" alt="admin-image">
+                            
+                            <img src="<?= $fotoProfil ?>" class="w-[35px] h-[35px] md:w-[42px] md:h-[42px] rounded-full ltr:md:mr-[2px] ltr:lg:mr-[8px] rtl:md:ml-[2px] rtl:lg:ml-[8px] border-[2px] border-primary-200 inline-block object-cover" alt="admin-image">
+                            
                             <span class="block font-semibold text-[0] lg:text-base">
-                                Olivia
+                                <?= esc($namaDepan) ?>
                             </span>
+                            
                             <i class="ri-arrow-down-s-line text-[15px] absolute ltr:-right-[3px] rtl:-left-[3px] top-1/2 -translate-y-1/2 mt-px"></i>
                         </button>
                         <div class="profile-menu-dropdown bg-white dark:bg-[#0c1427] transition-all shadow-3xl dark:shadow-none py-[22px] absolute mt-[13px] md:mt-[14px] w-[195px] z-[1] top-full ltr:right-0 rtl:left-0 rounded-md">
                             <div class="flex items-center border-b border-gray-100 dark:border-[#172036] pb-[12px] mx-[20px] mb-[10px]">
-                                <img src=<?= base_url("assets/images/admin.png") ?> class="rounded-full w-[31px] h-[31px] ltr:mr-[9px] rtl:ml-[9px] border-2 border-primary-200 inline-block" alt="admin-image">
+                                
+                                <img src="<?= $fotoProfil ?>" class="rounded-full w-[31px] h-[31px] ltr:mr-[9px] rtl:ml-[9px] border-2 border-primary-200 inline-block object-cover" alt="admin-image">
+                                
                                 <div>
                                     <span class="block text-black dark:text-white font-medium">
-                                        Olivia John
+                                        <?= esc($namaLengkap) ?>
                                     </span>
-                                    <span class="block text-xs">
-                                        Marketing Manager
+                                    
+                                    <span class="block text-xs capitalize">
+                                        <?= esc($posisi) ?>
                                     </span>
                                 </div>
                             </div>
                             <ul>
                                 <li>
-                                    <a href="my-profile.html" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <a href="<?= base_url('my-profile') ?>" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
                                         <i class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
                                             account_circle
                                         </i>
@@ -67,7 +96,7 @@
                             <div class="border-t border-gray-100 dark:border-[#172036] mx-[20px] my-[9px]"></div>
                             <ul>
                                 <li>
-                                    <a href="settings.html" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <a href="<?= base_url('setting') ?>" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
                                         <i class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
                                             settings
                                         </i>
@@ -75,7 +104,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="logout.html" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
+                                    <a href="<?= base_url('logout') ?>" class="block relative py-[7px] ltr:pl-[50px] ltr:pr-[20px] rtl:pr-[50px] rtl:pl-[20px] text-black dark:text-white transition-all hover:text-primary-500">
                                         <i class="material-symbols-outlined top-1/2 -translate-y-1/2 !text-[22px] absolute ltr:left-[20px] rtl:right-[20px]">
                                             logout
                                         </i>
@@ -103,4 +132,4 @@
                 </ul>
             </div>
         </div>
-        <!-- End Header -->
+        <!-- Header End -->
